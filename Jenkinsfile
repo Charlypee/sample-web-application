@@ -8,7 +8,7 @@ pipeline {
       stage('clone') {
         agent {
           docker {
-             image 'openjdk'
+            image 'openjdk'
           }
         }
 
