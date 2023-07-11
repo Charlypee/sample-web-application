@@ -3,12 +3,12 @@ pipeline {
       label 'java'
     }
 
-    stages {
+    stages{
 
       stage('clone') {
         agent {
           docker {
-            image 'openjdk'
+             image 'openjdk'
           }
         }
 
@@ -43,7 +43,7 @@ pipeline {
         }
         steps {
           script {
-            sh "python -version"
+            sh "python -h"
 
           }
         }
