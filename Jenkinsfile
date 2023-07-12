@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-      label 'java'
-    }
+    agent none
 
     stages{
 
@@ -21,12 +19,14 @@ pipeline {
         }
       }
 
+
       stage('build') {
         agent {
           docker {
              image 'node'
           }
         }
+
         steps {
           script {
             sh "node -v"
@@ -44,12 +44,10 @@ pipeline {
         steps {
           script {
             sh "python -h"
-
           }
         }
       }
-    }
-    
+    } 
 }
     
  
