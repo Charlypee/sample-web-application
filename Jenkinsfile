@@ -32,7 +32,7 @@ pipeline {
             steps {
               script {
                 sh "echo clone stage"
-                sh "docker login -u root -p $server-ssh-keys_PSW"
+                sh "docker login -u dockerpass_USR -p $dockerpass_PSW"
       
                 currentBuild.description = "${env.GIT_COMMIT}"
               }
