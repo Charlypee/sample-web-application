@@ -3,7 +3,7 @@ pipeline {
     environment{
       CC = 'clang'
       toolname = 'jenkins'
-      dockerpass = credentials('docker-user-pass')
+      dockerpass = credentials('server-ssh-keys')
     }
 
     options{
