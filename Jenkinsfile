@@ -6,7 +6,7 @@ pipeline{
       stage('sonarqube analysis'){
 
         agent {
-          docker{
+          docker {
             image 'maven'
           }
         }
